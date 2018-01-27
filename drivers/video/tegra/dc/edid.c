@@ -543,7 +543,7 @@ static void data_release(struct kref *ref)
 u16 tegra_edid_get_cd_flag(struct tegra_edid *edid)
 {
 	if (!edid || !edid->data) {
-		pr_warn("edid invalid\n");
+		pr_warn("edid invalid in function %s\n", __FUNCTION__);
 		return -EFAULT;
 	}
 
@@ -554,7 +554,7 @@ u16 tegra_edid_get_ex_hdr_cap(struct tegra_edid *edid)
 {
 	u16 ret = 0;
 	if (!edid || !edid->data) {
-		pr_warn("edid invalid\n");
+		pr_warn("edid invalid in function %s\n", __FUNCTION__);
 		return -EFAULT;
 	}
 
@@ -569,7 +569,7 @@ int tegra_edid_get_ex_hdr_cap_info(struct tegra_edid *edid,
 {
 	int ret = 0;
 	if (!edid || !edid->data) {
-		pr_warn("edid invalid\n");
+		pr_warn("edid invalid in function %s\n", __FUNCTION__);
 		return -EFAULT;
 	}
 
@@ -594,7 +594,7 @@ u16 tegra_edid_get_quant_cap(struct tegra_edid *edid)
 	u16 ret = 0;
 
 	if (!edid || !edid->data) {
-		pr_warn("edid invalid\n");
+		pr_warn("edid invalid in function %s\n", __FUNCTION__);
 		return 0;
 	}
 
@@ -613,7 +613,7 @@ u16 tegra_edid_get_max_clk_rate(struct tegra_edid *edid)
 	u16 tmds_hf, tmds_llc;
 
 	if (!edid || !edid->data) {
-		pr_warn("edid invalid\n");
+		pr_warn("edid invalid in function %s\n", __FUNCTION__);
 		return -EFAULT;
 	}
 
@@ -632,7 +632,7 @@ bool tegra_edid_is_scdc_present(struct tegra_edid *edid)
 		return false;
 	}
 	if (!edid || !edid->data) {
-		pr_warn("edid invalid\n");
+		pr_warn("edid invalid in function %s\n", __FUNCTION__);
 		return false;
 	}
 
@@ -648,7 +648,7 @@ bool tegra_edid_is_scdc_present(struct tegra_edid *edid)
 bool tegra_edid_is_hfvsdb_present(struct tegra_edid *edid)
 {
 	if (!edid || !edid->data) {
-		pr_warn("edid invalid\n");
+		pr_warn("edid invalid in function %s\n", __FUNCTION__);
 		return false;
 	}
 
@@ -658,7 +658,7 @@ bool tegra_edid_is_hfvsdb_present(struct tegra_edid *edid)
 bool tegra_edid_is_420db_present(struct tegra_edid *edid)
 {
 	if (!edid || !edid->data) {
-		pr_warn("edid invalid\n");
+		pr_warn("edid invalid in function %s\n", __FUNCTION__);
 		return false;
 	}
 
@@ -668,7 +668,7 @@ bool tegra_edid_is_420db_present(struct tegra_edid *edid)
 u32 tegra_edid_get_quirks(struct tegra_edid *edid)
 {
 	if (!edid || !edid->data) {
-		pr_warn("edid invalid\n");
+		pr_warn("edid invalid in function %s\n", __FUNCTION__);
 		return false;
 	}
 
@@ -678,7 +678,7 @@ u32 tegra_edid_get_quirks(struct tegra_edid *edid)
 u16 tegra_edid_get_ex_colorimetry(struct tegra_edid *edid)
 {
 	if (!edid || !edid->data) {
-		pr_warn("edid invalid\n");
+		pr_warn("edid invalid in function %s\n", __FUNCTION__);
 		return 0;
 	}
 
@@ -688,7 +688,7 @@ u16 tegra_edid_get_ex_colorimetry(struct tegra_edid *edid)
 bool tegra_edid_support_yuv422(struct tegra_edid *edid)
 {
 	if (!edid || !edid->data) {
-		pr_warn("edid invalid\n");
+		pr_warn("edid invalid in function %s\n", __FUNCTION__);
 		return 0;
 	}
 
@@ -698,7 +698,7 @@ bool tegra_edid_support_yuv422(struct tegra_edid *edid)
 bool tegra_edid_support_yuv444(struct tegra_edid *edid)
 {
 	if (!edid || !edid->data) {
-		pr_warn("edid invalid\n");
+		pr_warn("edid invalid in function %s\n", __FUNCTION__);
 		return 0;
 	}
 
